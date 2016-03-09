@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7DAE66311C907FF40049500D /* managed_objects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = managed_objects.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DAE66311C907FF40049500D /* MysticEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MysticEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DAE66341C907FF40049500D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DAE66391C907FF40049500D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DAE663C1C907FF40049500D /* managed_objects.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = managed_objects.xcdatamodel; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		7DAE66321C907FF40049500D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7DAE66311C907FF40049500D /* managed_objects.app */,
+				7DAE66311C907FF40049500D /* MysticEvents.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,9 +78,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7DAE66301C907FF40049500D /* managed_objects */ = {
+		7DAE66301C907FF40049500D /* MysticEvents */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DAE66461C907FF40049500D /* Build configuration list for PBXNativeTarget "managed_objects" */;
+			buildConfigurationList = 7DAE66461C907FF40049500D /* Build configuration list for PBXNativeTarget "MysticEvents" */;
 			buildPhases = (
 				7DAE662D1C907FF40049500D /* Sources */,
 				7DAE662E1C907FF40049500D /* Frameworks */,
@@ -90,9 +90,9 @@
 			);
 			dependencies = (
 			);
-			name = managed_objects;
+			name = MysticEvents;
 			productName = managed_objects;
-			productReference = 7DAE66311C907FF40049500D /* managed_objects.app */;
+			productReference = 7DAE66311C907FF40049500D /* MysticEvents.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +110,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7DAE662C1C907FF40049500D /* Build configuration list for PBXProject "managed_objects" */;
+			buildConfigurationList = 7DAE662C1C907FF40049500D /* Build configuration list for PBXProject "MysticEvents" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -123,7 +123,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7DAE66301C907FF40049500D /* managed_objects */,
+				7DAE66301C907FF40049500D /* MysticEvents */,
 			);
 		};
 /* End PBXProject section */
@@ -267,7 +267,7 @@
 				INFOPLIST_FILE = managed_objects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mysticorp.managed-objects";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MysticEvents;
 				SWIFT_OBJC_BRIDGING_HEADER = "managed_objects-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -281,7 +281,7 @@
 				INFOPLIST_FILE = managed_objects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mysticorp.managed-objects";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MysticEvents;
 				SWIFT_OBJC_BRIDGING_HEADER = "managed_objects-Bridging-Header.h";
 			};
 			name = Release;
@@ -289,7 +289,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7DAE662C1C907FF40049500D /* Build configuration list for PBXProject "managed_objects" */ = {
+		7DAE662C1C907FF40049500D /* Build configuration list for PBXProject "MysticEvents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DAE66441C907FF40049500D /* Debug */,
@@ -298,7 +298,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7DAE66461C907FF40049500D /* Build configuration list for PBXNativeTarget "managed_objects" */ = {
+		7DAE66461C907FF40049500D /* Build configuration list for PBXNativeTarget "MysticEvents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DAE66471C907FF40049500D /* Debug */,

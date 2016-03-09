@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:managed_objects.xcodeproj">
+      location = "self:/Users/ejw/Documents/Development/ex/managed_objects/MysticEvents.xcodeproj">
    </FileRef>
 </Workspace>
