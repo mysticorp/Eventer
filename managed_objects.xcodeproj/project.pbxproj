@@ -8,22 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		7DAE66351C907FF40049500D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE66341C907FF40049500D /* AppDelegate.swift */; };
-		7DAE66371C907FF40049500D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE66361C907FF40049500D /* ViewController.swift */; };
 		7DAE663A1C907FF40049500D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE66381C907FF40049500D /* Main.storyboard */; };
 		7DAE663D1C907FF40049500D /* managed_objects.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE663B1C907FF40049500D /* managed_objects.xcdatamodeld */; };
 		7DAE663F1C907FF40049500D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE663E1C907FF40049500D /* Assets.xcassets */; };
 		7DAE66421C907FF40049500D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE66401C907FF40049500D /* LaunchScreen.storyboard */; };
+		7DAE66521C9084FB0049500D /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE66501C9084FB0049500D /* Event+CoreDataProperties.swift */; };
+		7DAE66531C9084FB0049500D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE66511C9084FB0049500D /* Event.swift */; };
+		7DAE66551C9097040049500D /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE66541C9097040049500D /* EventTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7DAE66311C907FF40049500D /* managed_objects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = managed_objects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DAE66341C907FF40049500D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7DAE66361C907FF40049500D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7DAE66391C907FF40049500D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DAE663C1C907FF40049500D /* managed_objects.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = managed_objects.xcdatamodel; sourceTree = "<group>"; };
 		7DAE663E1C907FF40049500D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DAE66411C907FF40049500D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DAE66431C907FF40049500D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DAE66491C9083A50049500D /* managed_objects-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "managed_objects-Bridging-Header.h"; sourceTree = "<group>"; };
+		7DAE66501C9084FB0049500D /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Event+CoreDataProperties.swift"; path = "../Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7DAE66511C9084FB0049500D /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = ../Event.swift; sourceTree = "<group>"; };
+		7DAE66541C9097040049500D /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +47,7 @@
 			children = (
 				7DAE66331C907FF40049500D /* managed_objects */,
 				7DAE66321C907FF40049500D /* Products */,
+				7DAE66491C9083A50049500D /* managed_objects-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,12 +63,14 @@
 			isa = PBXGroup;
 			children = (
 				7DAE66341C907FF40049500D /* AppDelegate.swift */,
-				7DAE66361C907FF40049500D /* ViewController.swift */,
+				7DAE66541C9097040049500D /* EventTableViewController.swift */,
 				7DAE66381C907FF40049500D /* Main.storyboard */,
 				7DAE663E1C907FF40049500D /* Assets.xcassets */,
 				7DAE66401C907FF40049500D /* LaunchScreen.storyboard */,
 				7DAE66431C907FF40049500D /* Info.plist */,
 				7DAE663B1C907FF40049500D /* managed_objects.xcdatamodeld */,
+				7DAE66501C9084FB0049500D /* Event+CoreDataProperties.swift */,
+				7DAE66511C9084FB0049500D /* Event.swift */,
 			);
 			path = managed_objects;
 			sourceTree = "<group>";
@@ -138,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DAE66371C907FF40049500D /* ViewController.swift in Sources */,
+				7DAE66521C9084FB0049500D /* Event+CoreDataProperties.swift in Sources */,
 				7DAE663D1C907FF40049500D /* managed_objects.xcdatamodeld in Sources */,
+				7DAE66531C9084FB0049500D /* Event.swift in Sources */,
 				7DAE66351C907FF40049500D /* AppDelegate.swift in Sources */,
+				7DAE66551C9097040049500D /* EventTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,10 +263,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = managed_objects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mysticorp.managed-objects";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "managed_objects-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -264,10 +277,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = managed_objects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mysticorp.managed-objects";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "managed_objects-Bridging-Header.h";
 			};
 			name = Release;
 		};
