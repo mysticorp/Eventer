@@ -12,6 +12,7 @@ import CoreData
 class EventTableViewController: UITableViewController {
 
     var events = [Event]();
+    var selectedEvent: Event?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,11 @@ class EventTableViewController: UITableViewController {
         if let events = Event.allEvents() {
             self.events = events
         }
+        tableView.registerNib(UINib(nibName: "ColorBubbleTableViewCell", bundle: nil), forCellReuseIdentifier: "bubbleCell")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,7 +74,7 @@ class EventTableViewController: UITableViewController {
     }
     
     private func stringForValue(value: Int, valueName: String) -> String {
-        if value > 0 {
+        if value != 0 {
             return "\(value)\(valueName) "
         } else {
             return ""
@@ -76,23 +82,39 @@ class EventTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("eventCell", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("bubbleCell", forIndexPath: indexPath)
         let event = events[indexPath.row]
-        cell.detailTextLabel?.text = event.title
-        if let date = event.date {
-            let cal = NSCalendar.currentCalendar()
-            let comp = cal.components([.Day, .Month, .Year], fromDate: date, toDate: NSDate(), options: [])
-            let timeElapsedString = "\(stringForValue(comp.year, valueName: "y"))\(stringForValue(comp.month, valueName: "m"))\(stringForValue(comp.day, valueName: "d"))"
-            cell.textLabel?.text = timeElapsedString.isEmpty ? "no days" : timeElapsedString
+        if let bubbleCell = cell as? ColorBubbleTableViewCell {
+            bubbleCell.eventTitle.text = event.title
+            if let date = event.date {
+                let cal = NSCalendar.currentCalendar()
+                let comp = cal.components([.Day, .Month, .Year], fromDate: date, toDate: NSDate(), options: [])
+                let timeElapsedString = "\(stringForValue(comp.year, valueName: "y"))\(stringForValue(comp.month, valueName: "m"))\(stringForValue(comp.day, valueName: "d"))"
+                bubbleCell.eventDate.text = timeElapsedString.isEmpty ? "no days" : timeElapsedString
+            }
         }
+        
+//        let event = events[indexPath.row]
+//        cell.detailTextLabel?.text = event.title
+//        if let date = event.date {
+//            let cal = NSCalendar.currentCalendar()
+//            let comp = cal.components([.Day, .Month, .Year], fromDate: date, toDate: NSDate(), options: [])
+//            let timeElapsedString = "\(stringForValue(comp.year, valueName: "y"))\(stringForValue(comp.month, valueName: "m"))\(stringForValue(comp.day, valueName: "d"))"
+//            cell.textLabel?.text = timeElapsedString.isEmpty ? "no days" : timeElapsedString
+//        }
         
         return cell
     }
 
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
+        self.selectedEvent = nil
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let event = events[indexPath.row]
+        self.selectedEvent = event
+        self.performSegueWithIdentifier("eventEditSegue", sender: self)
     }
     /*
     // Override to support conditional editing of the table view.
@@ -129,14 +151,15 @@ class EventTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let editController = segue.destinationViewController as? EventEditorViewController {
+            editController.event = self.selectedEvent
+        }
     }
-    */
 
 }
